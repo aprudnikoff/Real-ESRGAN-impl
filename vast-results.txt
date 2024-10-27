@@ -1,0 +1,1 @@
+RTX3060, 12 TFLOPS, 34 sec
