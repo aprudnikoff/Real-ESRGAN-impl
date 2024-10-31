@@ -1,4 +1,5 @@
 import os 
+import time
 import torch
 from PIL import Image
 import numpy as np
@@ -22,4 +23,9 @@ if __name__ == '__main__':
     
     input_image_path = sys.argv[1]
     output_image_path = sys.argv[2]
+        
+    start_time = time.time()
     main(input_image_path, output_image_path)
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print(f'Execution time: {execution_time} seconds')
