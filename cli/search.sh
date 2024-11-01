@@ -11,7 +11,7 @@ SSH_HOST=''
 SSH_PORT=''
 
 echo Finding offers
-OFFERS="$(vastai search offers 'num_gpus=1 dph<0.06 storage_cost<2 rented=False' --on-demand --storage 16)"
+OFFERS="$(vastai search offers 'num_gpus=1 dph<0.06 storage_cost<2 rented=False' -o 'dlperf_usd-' --on-demand --storage 16)"
 OFFER_ID=$(awk 'NR==2{print $1}' <<< "${OFFERS}")
 echo "$OFFERS"
 
