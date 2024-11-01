@@ -48,12 +48,22 @@ export NVM_DIR="$HOME/.nvm"
 nvm install 20
 
 
+# Install exiftool
+apt-get -y install build-essential
+curl --output Image-ExifTool-12.97.tar.gz https://exiftool.org/Image-ExifTool-12.97.tar.gz
+gzip -dc Image-ExifTool-12.97.tar.gz | tar -xf -
+cd Image-ExifTool-12.97
+perl Makefile.PL
+make test
+make install
+
+
 # Clone JS project and install dependencies
 cd ~/projects/
 ssh-keyscan bitbucket.org >> ~/.ssh/known_hosts
 git clone git@bitbucket.org:pxx/stock-ass.git
 cd stock-ass/
-git checkout master
+git checkout vast
 npm i
 
 
