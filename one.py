@@ -30,6 +30,7 @@ if __name__ == '__main__':
     execution_time = round(end_time - start_time)
     print(f'Execution time: ~{execution_time} seconds')
 
+# TODO: fix warnings
 # /usr/local/lib/python3.10/dist-packages/huggingface_hub/utils/_deprecation.py:131: FutureWarning: 'cached_download' (from 'huggingface_hub.file_download') is deprecated and will be removed from version '0.26'. Use `hf_hub_download` instead.
 #   warnings.warn(warning_message, FutureWarning)
 # /usr/local/lib/python3.10/dist-packages/huggingface_hub/file_download.py:672: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
